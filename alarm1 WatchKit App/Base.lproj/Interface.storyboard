@@ -1,39 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="alarm1_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <group alignment="center" verticalAlignment="center" id="P8A-GK-jnz">
+                            <items>
+                                <button width="55" alignment="left" verticalAlignment="center" title="12" id="tmL-aA-oPd">
+                                    <fontDescription key="font" type="system" pointSize="38"/>
+                                    <connections>
+                                        <action selector="onHoursTap" destination="AgC-eL-Hgc" id="hG8-NP-OLp"/>
+                                    </connections>
+                                </button>
+                                <label width="10" height="79.5" alignment="left" verticalAlignment="center" text=":" id="1z9-35-CGj">
+                                    <fontDescription key="font" type="system" pointSize="38"/>
+                                </label>
+                                <button width="55" alignment="left" verticalAlignment="center" title="59" id="dg7-hM-hPU">
+                                    <fontDescription key="font" type="system" pointSize="38"/>
+                                    <connections>
+                                        <action selector="onMinutesTap" destination="AgC-eL-Hgc" id="y5a-LE-LPD"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="confirm" id="g4x-3b-Zf1">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <connections>
+                                <action selector="onConfirmTap" destination="AgC-eL-Hgc" id="DUJ-C2-wfe"/>
+                            </connections>
+                        </button>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <outlet property="confirmButton" destination="g4x-3b-Zf1" id="HxE-03-Xvu"/>
+                        <outlet property="hoursButton" destination="tmL-aA-oPd" id="Ob4-zB-h7c"/>
+                        <outlet property="minutesButton" destination="dg7-hM-hPU" id="ZtT-Tw-hFg"/>
+                        <outlet property="separatorLabel" destination="1z9-35-CGj" id="WSZ-Sk-buy"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="107" y="345"/>
         </scene>
     </scenes>
 </document>
