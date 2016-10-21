@@ -155,6 +155,8 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
             ud?.set(hours, forKey: "hours")
             ud?.set(minutes, forKey: "minutes")
             
+            hoursButton?.setAlpha(1)
+            minutesButton?.setAlpha(1)
             let action = WKAlertAction(title: "OK", style: .default, handler: {})
             presentAlert(withTitle: "Done", message: "Alarm was set \nfor \(hours.toTimeString()):\(minutes.toTimeString())", preferredStyle: .alert, actions: [action])
         } else {
