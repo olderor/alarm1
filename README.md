@@ -1,3 +1,3 @@
 # alarm1
-alarm interface lab</br>
+Alarm interface for Apple Watch OS 3.0 (lab)</br>
 <img src="http://i.imgur.com/KJ7IoU7.gif" />
