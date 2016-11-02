@@ -1,3 +1,3 @@
 # alarm1
-alarm interface lab
-![alt tag](http://imgur.com/KJ7IoU7)
+alarm interface lab</br>
+<img src="http://i.imgur.com/KJ7IoU7.gif" />
